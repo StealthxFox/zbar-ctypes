@@ -297,3 +297,4 @@ libzbar.zbar_symbol_get_data_length.restype = c_uint
 # const char *zbar_symbol_get_data(const zbar_symbol_t *symbol);
 libzbar.zbar_symbol_get_data.argtypes = [POINTER(zbar_symbol_t)]
 libzbar.zbar_symbol_get_data.restype = c_char_p
+libzbar.zbar_symbol_next.restype = POINTER(zbar_symbol_t)

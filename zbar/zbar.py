@@ -107,7 +107,7 @@ class ImageScanner:
     def scan(self, data, width, height, format):
         image = Image(data, width, height, format)
         decoded = libzbar.zbar_scan_image(self.scanner_ptr, image.image_ptr)
-        if decoded != 1:
+        if decoded < 1:
             return []
 
         codes = []
